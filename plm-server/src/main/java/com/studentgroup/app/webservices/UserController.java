@@ -104,6 +104,9 @@ public class UserController {
         String token = tokenjson.asText();
 
         EmployeeUser caller = userRepo.findByToken(token);
+        if (caller == null) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        }
         if (caller.getRole() != Role.ADMIN) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
         }
