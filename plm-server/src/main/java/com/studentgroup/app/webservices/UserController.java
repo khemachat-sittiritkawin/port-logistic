@@ -16,7 +16,6 @@ import com.studentgroup.app.model.Role;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.List;
 import java.security.NoSuchAlgorithmException;
 
 @RestController
